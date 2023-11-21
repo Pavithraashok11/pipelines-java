@@ -20,12 +20,4 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
-    
-    
-- task: AzureRmWebAppDeployment@4
-  inputs:
-    ConnectionType: 'AzureRM'
-    azureSubscription: 'Pay-As-You-Go(b801fce2-bcc8-4ed8-9082-75c0c7fb508e)'
-    appType: 'webApp'
-    WebAppName: 'FirstWebAppOn'
-    packageForLinux: '$(System.ArtifactsDirectory)/drop/*.zip'
+  
